@@ -1,0 +1,5 @@
+fastapi  
+motor == 2.2.0
+uvicorn
+python-multipart
+tornado

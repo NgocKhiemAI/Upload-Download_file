@@ -1,0 +1,29 @@
+version: '3'   # version cua docker-compose
+services:
+  web:
+    build: .
+    ports:
+    - "5000:5000"          # port minh tu tao, 
+    networks:              # network dung chung cua api va mongodb
+      - mongo_net
+    depends_on:
+      - mongodb_container_1                
+
+  mongodb_container_1:
+    image: mongo:latest
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: "ngockhiem"
+      MONGO_INITDB_ROOT_PASSWORD: "1234"
+    ports:                        #port mac dinh cua mongodb
+      - 27017:27017
+    volumes:
+      - mongodb_data_container:/data/db
+    networks:
+      - mongo_net
+  
+volumes:
+  mongodb_data_container: 
+
+networks:
+  mongo_net:                   
+    driver: bridge
