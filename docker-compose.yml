@@ -3,13 +3,13 @@ services:
   web:
     build: .
     ports:
-    - "5000:5000"          # port minh tu tao, 
+    - "2000:2000"          # port minh tu tao, 
     networks:              # network dung chung cua api va mongodb
       - mongo_net
     depends_on:
-      - mongodb_container_1                
+      - mongodb_containers                
 
-  mongodb_container_1:
+  mongodb_containers:
     image: mongo:latest
     environment:
       MONGO_INITDB_ROOT_USERNAME: "ngockhiem"

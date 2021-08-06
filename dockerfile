@@ -11,4 +11,4 @@ RUN pip3 install -r requirement.txt
 # run cmd
 COPY . .
 
-CMD ["uvicorn","uploadfile-mongo:app","--host","0.0.0.0","--port","5000"]
+CMD ["uvicorn","uploadfile-mongo:app","--host","0.0.0.0","--port","2000"]
