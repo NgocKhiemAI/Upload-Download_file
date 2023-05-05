@@ -1,5 +1,5 @@
-- cần :
-- đổi tên của mongo(trong file docker-compose), hiện tại đang có tên là mongodb_containers
-- đổi username, password trong phần enviroment của file docker-compose
-- thay đổi thư mục làm việc trong dockerfile bằng thư mục hiện tại đang lưu
-- sử dụng lệnh docker-compose up --build để chạy
+- Need :
+- Change name of mongodb(in file docker-compose), the current name is mongodb_containers
+- Change username, password in enviroment of docker-compose file
+- Change work directory in dockerfile to your work directory
+- Run command: docker-compose up --build
